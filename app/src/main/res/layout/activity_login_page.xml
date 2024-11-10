@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_page">
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/tic_tac_toc"
+        android:textSize="50sp"
+        android:textAlignment="center"
+
+        app:flow_horizontalAlign="start"
+        android:paddingTop="18sp"
+        android:textStyle="bold"
+        android:textColorHighlight="#2196F3"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+
+        android:text="Enter Player Names 👨‍✈️🧑‍✈️"
+        android:textSize="25sp"
+        android:textColor="#2196F3"
+        android:paddingStart="20dp"
+        android:id="@+id/playerheader"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title" />
+
+
+    <TextView
+        android:id="@+id/player1_head"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:text="@string/player_1"
+        android:textColor="#F44336"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_txt1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerheader" />
+
+    <EditText
+        android:id="@+id/edit_txt1"
+
+        style="@style/Animation.Design.BottomSheetDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints="PLayer 1 Name"
+        android:hint="@string/player_1_name"
+        android:inputType="text|textAutoComplete|textAutoCorrect|textCapCharacters|textCapSentences|textCapWords"
+
+        android:textSize="20sp"
+
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player1_head" />
+
+    <TextView
+        android:id="@+id/player2_head"
+        android:layout_marginLeft="10dp"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="textAutoComplete"
+
+        android:text="@string/player_2"
+        android:textColor="#F44336"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edit_txt2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextViewEdits" />
+
+    <EditText
+        android:id="@+id/edit_txt2"
+
+        style="@style/Animation.Design.BottomSheetDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autofillHints="PLayer 1 Name"
+        android:drawableBottom="@drawable/custom_input_btn"
+        android:hint="Player 2 Name"
+        android:inputType="text|textAutoComplete|textAutoCorrect|textCapCharacters|textCapSentences"
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/player2_head" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/start"
+        android:id="@+id/startbtn"
+        android:textSize="26sp"
+        android:textStyle="italic"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_txt2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
